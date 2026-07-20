@@ -259,7 +259,7 @@ body {
   z-index: 2;
   background: #FFF;
   padding: 3%;
-  border: 2px dashed var(--muted-red);
+  border: 2px dashed var(--dusty-pink);
   transform: rotate(-9deg);
   box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -290,24 +290,6 @@ body {
   text-transform: uppercase;
 }
 
-/* Card 2: Note Paper Overlay (Backdrop behind Polaroid) */
-.notepaper-overlay {
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  width: 60%;
-  height: 68%;
-  background: #FAF8EE;
-  background-image: 
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 14px 14px;
-  border: 1.5px solid var(--text-charcoal);
-  border-radius: 4px;
-  transform: rotate(5deg) translate(6px, 6px);
-  z-index: 3;
-}
-
 /* Card 3: Polaroid Card (Bottom Right) */
 .polaroid-card {
   position: absolute;
@@ -316,7 +298,7 @@ body {
   width: 60%;
   z-index: 4;
   background: #FFFFFF;
-  border: 1.5px solid var(--text-charcoal);
+  border: 1.5px solid var(--soft-blue);
   padding: 4%;
   transform: rotate(5deg);
   box-shadow: 4px 4px 12px rgba(0,0,0,0.12);
