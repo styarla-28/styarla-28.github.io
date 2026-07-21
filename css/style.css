@@ -39,8 +39,11 @@ body {
 /* Subtle Film Grain Noise Texture */
 .grain-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 1px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 4px 4px;
   pointer-events: none;
   z-index: 99;
@@ -87,7 +90,8 @@ body {
   transition: color 0.2s ease;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover,
+.nav-item.active {
   color: var(--muted-red);
 }
 
@@ -130,7 +134,8 @@ body {
   gap: clamp(1.5rem, 3vw, 3rem);
   align-items: center;
   box-shadow: 6px 6px 0px var(--soft-blue);
-  overflow: hidden; /* Prevents angled elements from creating horizontal scrollbars */
+  overflow: hidden;
+  /* Prevents angled elements from creating horizontal scrollbars */
 }
 
 /* Left Column: Typography & Action */
@@ -261,7 +266,7 @@ body {
   padding: 3%;
   border: 2px dashed var(--dusty-pink);
   transform: rotate(-9deg);
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -301,7 +306,7 @@ body {
   border: 1.5px solid var(--soft-blue);
   padding: 4%;
   transform: rotate(5deg);
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
 }
 
@@ -352,8 +357,15 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(15deg); }
-  50% { transform: translateY(-8px) rotate(22deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(22deg);
+  }
 }
 
 /* Hover depth interaction */
@@ -364,6 +376,7 @@ body {
 .hero-visual-wrapper:hover .polaroid-card {
   transform: rotate(2deg) scale(1.02);
 }
+
 /* ==========================================================================
    5. RESTRUCTURED ABOUT SECTION STYLES
    ========================================================================== */
