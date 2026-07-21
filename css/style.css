@@ -155,7 +155,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Newsreader', serif;
   font-weight: 800;
   font-size: clamp(1.8rem, 3.2vw, 3rem);
   color: var(--text-charcoal);
@@ -363,6 +363,277 @@ body {
 
 .hero-visual-wrapper:hover .polaroid-card {
   transform: rotate(2deg) scale(1.02);
+}
+/* ==========================================================================
+   5. RESTRUCTURED ABOUT SECTION STYLES
+   ========================================================================== */
+.about-section {
+  width: 100%;
+  max-width: 1140px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.about-header {
+  margin-bottom: 1.5rem;
+}
+
+.about-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--text-charcoal);
+  margin-top: 0.5rem;
+}
+
+/* Main Body Card directly under Header */
+.dossier-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 0 16px 16px 16px;
+  box-shadow: 6px 6px 0px var(--sage-green);
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dossier-tab {
+  position: absolute;
+  top: -30px;
+  left: -2px;
+  background: var(--sage-green);
+  border: 2px solid var(--text-charcoal);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.25rem 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.dossier-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dossier-headline {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.35rem;
+  color: var(--text-charcoal);
+  line-height: 1.3;
+}
+
+.dossier-text {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.65;
+}
+
+/* Grid Ratio: Left Column (Smaller: 0.85fr), Right Column (Larger: 1.15fr) */
+.about-layout-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* --- Left Column (Smaller) --- */
+.sidebar-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Passport Badge */
+.passport-card {
+  background: var(--soft-blue);
+  border: 2px solid var(--text-charcoal);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 5px 5px 0px var(--text-charcoal);
+}
+
+.passport-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  border-bottom: 1.5px solid var(--text-charcoal);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.passport-status {
+  color: #1b7a3d;
+  font-weight: bold;
+}
+
+.passport-body {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.passport-avatar {
+  width: 55px;
+  height: 55px;
+  background: #FFF;
+  border: 1.5px solid var(--text-charcoal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.passport-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-charcoal);
+}
+
+.passport-role {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.passport-meta {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+.passport-barcode {
+  font-family: var(--font-pixel);
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-charcoal);
+}
+
+/* Quirks Box */
+.quirks-box {
+  background: #FFFFFF;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 4px 4px 0px var(--dusty-pink);
+}
+
+.quirks-box-title {
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-charcoal);
+}
+
+.quirks-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quirk-chip {
+  background: var(--bg-cream);
+  border: 1.5px solid var(--text-charcoal);
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* --- Right Column (Larger & Featured) --- */
+.featured-about-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Highlights Grid */
+.dossier-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  background: #FFFFFF;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 5px 5px 0px var(--sage-green);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.highlight-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.highlight-item strong {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted-red);
+}
+
+.highlight-item p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+/* Methodology Toolkit Box */
+.toolkit-box {
+  background: #FFFFFF;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 0px var(--soft-blue);
+}
+
+.toolkit-box-title {
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-charcoal);
+  border-bottom: 1.5px dashed var(--text-charcoal);
+  padding-bottom: 0.4rem;
+}
+
+.toolkit-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.toolkit-checklist li {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #333;
+}
+
+.check-icon {
+  color: var(--muted-red);
+  font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 820px) {
+  .about-layout-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================
