@@ -923,8 +923,8 @@ body {
 .tag-ai { background: var(--soft-blue); }
 
 .case-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
   color: var(--text-charcoal);
   line-height: 1.15;
@@ -1086,7 +1086,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Newsreader', serif;
   font-size: 1.8rem;
   color: var(--text-charcoal);
   border-bottom: 2px solid var(--text-charcoal);
@@ -1200,8 +1200,8 @@ body {
 }
 
 .solution-card h4 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.05rem;
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--text-charcoal);
 }
@@ -1238,7 +1238,7 @@ body {
 
 .metric-number {
   display: block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Newsreader', serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--text-charcoal);
