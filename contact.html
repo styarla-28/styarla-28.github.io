@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Resumes | UX Research & AI Strategy</title>
+  
+  <!-- Google Fonts: Syne, Outfit, Caveat, VT323, Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;600;800&family=VT323&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Subtle Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <div class="logo-text">research<span class="dot">.</span>log</div>
+    </a>
+    <nav class="nav-links">
+      <nav class="nav-links">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="projects.html" class="nav-item">Work</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="coffee-table.html" class="nav-item badge-nav">Coffee Table ☕</a>
+      <a href="contact.html" class="nav-item btn-nav active">Contact</a>
+    </nav>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="contact-hero">
+    <div class="contact-hero-container grid-background">
+      <span class="badge-pixel">★ TRANSMISSION // INBOX ★</span>
+      <h1 class="hero-title">let's build something <span class="highlight-text-editorial">smart together.</span></h1>
+      <p class="hero-subtitle">Open for full-time UX Research roles, AI Product Strategy consulting, and contract research design projects.</p>
+    </div>
+  </section>
+
+  <!-- Main Contact Content Layout -->
+  <main class="contact-main">
+
+    <!-- ==========================================================================
+         SECTION 1: RESUME VAULT (Tailored Resumes for Different Roles)
+         ========================================================================== -->
+    <section class="resume-vault-section">
+      <div class="vault-header">
+        <h2 class="vault-title">01. Resume Dossier Vault</h2>
+        <span class="badge-pixel">DOWNLOADABLE PDFs</span>
+      </div>
+      <p class="vault-desc">Recruiters and hiring managers: Select the tailored resume that best aligns with your team's opening.</p>
+
+      <div class="resume-grid">
+        
+        <!-- Resume Option 1: UX Research -->
+        <article class="resume-card">
+          <div class="resume-tag">PRIMARY FOCUS</div>
+          <div class="resume-icon">🔬</div>
+          <h3>UX Researcher Resume</h3>
+          <p>Tailored for quantitative &amp; qualitative research roles, usability testing, and strategic discovery work.</p>
+          <a href="assets/resumes/UX_Research_Resume.pdf" target="_blank" class="btn-primary btn-resume">Download PDF ➔</a>
+        </article>
+
+        <!-- Resume Option 2: AI Strategy -->
+        <article class="resume-card ai-resume">
+          <div class="resume-tag tag-blue">SPECIALIZED</div>
+          <div class="resume-icon">🤖</div>
+          <h3>Academic Projects</h3>
+          <p>Highlights prompt auditing, LLM evaluation, non-deterministic interface workflows, and user trust.</p>
+          <a href="assets/resumes/AI_Strategy_Resume.pdf" target="_blank" class="btn-primary btn-resume">Download PDF ➔</a>
+        </article>
+
+        <!-- Resume Option 3: Product & IxD -->
+        <article class="resume-card ixd-resume">
+          <div class="resume-tag tag-pink">GENERALIST</div>
+          <div class="resume-icon">🎨</div>
+          <h3>Interaction Designer</h3>
+          <p>Focuses on end-to-end product design, interactive Figma prototyping, wireframing, and design systems.</p>
+          <a href="assets/resumes/Interaction_Design_Resume.pdf" target="_blank" class="btn-primary btn-resume">Download PDF ➔</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: CONTACT FORM & DIRECT TOUCHPOINTS
+         ========================================================================== -->
+    <section class="contact-split-section">
+      
+      <!-- Left: Interactive Contact Form -->
+      <div class="contact-form-box">
+        <h2 class="form-title">02. Send a Message</h2>
+        <form class="retro-form" action="https://formspree.io/f/your-form-id" method="POST">
+          
+          <div class="form-group">
+            <label for="name">YOUR NAME / COMPANY *</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Sarah from Acme Corp" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">EMAIL ADDRESS *</label>
+            <input type="email" id="email" name="email" placeholder="sarah@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">OPPORTUNITY TYPE</label>
+            <select id="subject" name="subject">
+              <option value="full-time">Full-Time Role Opportunity</option>
+              <option value="contract">Contract UX / AI Project</option>
+              <option value="consulting">Advisory / Consulting</option>
+              <option value="other">Just saying hello!</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">PROJECT / ROLE DETAILS *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about the role, team, or challenge you're solving..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary btn-submit">Send Transmission ➔</button>
+
+        </form>
+      </div>
+
+      <!-- Right: Direct Contact Info Card -->
+      <aside class="contact-info-aside">
+        
+        <div class="quick-connect-card">
+          <h3 class="connect-title">Direct Signal</h3>
+          <p class="connect-text">Prefer to skip the form? Reach out directly via email or connect on social platforms.</p>
+          
+          <ul class="direct-links-list">
+            <li>
+              <span class="direct-icon">✉️</span>
+              <div>
+                <strong>Direct Email</strong>
+                <a href="mailto:styarla@umich.edu">styarla@umich.edu</a>
+              </div>
+            </li>
+            <li>
+              <span class="direct-icon">💼</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <a href="https://linkedin.com/in/yshrina-tyarla" target="_blank">linkedin.com/in/shrina-styarla</a>
+              </div>
+            </li>
+            <li>
+              <span class="direct-icon">🐙</span>
+              <div>
+                <strong>GitHub</strong>
+                <a href="https://github.com/styarla-28" target="_blank">github.com/styarla-28</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="availability-status">
+          <span class="status-indicator">●</span>
+          <div>
+            <strong>Current Status:</strong>
+            <p>Available for Q3/Q4 2026 roles &amp; select contract projects.</p>
+          </div>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Signal Received. Designed &amp; Coded with ☕.</p>
+  </footer>
+
+</body>
+</html>

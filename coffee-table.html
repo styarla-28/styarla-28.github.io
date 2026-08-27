@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Coffee Table | Shrina Tyarla</title>
+
+    <!-- Google Fonts: same set used across the rest of the site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&family=VT323&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/coffee-table.css">
 </head>
+
 <body>
-    
+
+    <!-- Subtle Grain Overlay (matches rest of site) -->
+    <div class="grain-overlay"></div>
+
+    <!-- Global Header Navigation (matches rest of site) -->
+    <header class="site-header">
+        <a href="index.html" class="logo-link">
+            <span class="logo-text">shrina<span class="dot">.</span>ux</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="projects.html" class="nav-item">Work</a>
+            <a href="index.html#about" class="nav-item">About</a>
+            <a href="coffee-table.html" class="nav-item badge-nav active">Coffee Table ☕</a>
+            <a href="contact.html" class="nav-item btn-nav">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Intro / Hero -->
+        <section class="coffee-hero">
+            <div class="coffee-hero-inner">
+                <span class="badge-pixel">★ portfolio / / coffee_table.log</span>
+                <h1 class="hero-title">welcome to my <span class="highlight-text-editorial">coffee table!</span></h1>
+                <p class="hero-subtitle">
+                    Feel free to learn about my various hobbies by clicking on the objects on the table
+                    &mdash; or use the list below if you're on a smaller screen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interactive Table Scene -->
+        <section class="table-frame">
+            <div class="table-wrap">
+                <div class="table-shadow"></div>
+                <div class="table-leg table-leg--left"></div>
+                <div class="table-leg table-leg--right"></div>
+
+                <div class="table-surface">
+
+                    <button class="hotspot hotspot--pink" style="--x:12%; --y:58%; --delay:0s;"
+                        data-hobby="painting" aria-pressed="false">
+                        <span class="hotspot-label">Painting</span>
+                        <span class="hotspot-icon" aria-hidden="true">🎨</span>
+                        <span class="sr-only">Learn about my painting hobby</span>
+                    </button>
+
+                    <button class="hotspot hotspot--sage" style="--x:27%; --y:74%; --delay:.4s;"
+                        data-hobby="pottery" aria-pressed="false">
+                        <span class="hotspot-label">Ceramics</span>
+                        <span class="hotspot-icon" aria-hidden="true">🏺</span>
+                        <span class="sr-only">Learn about my ceramics hobby</span>
+                    </button>
+
+                    <button class="hotspot hotspot--blue" style="--x:45%; --y:32%; --delay:.8s;"
+                        data-hobby="florals" aria-pressed="false">
+                        <span class="hotspot-label">Florals</span>
+                        <span class="hotspot-icon" aria-hidden="true">💐</span>
+                        <span class="sr-only">Learn about my flower arranging hobby</span>
+                    </button>
+
+                    <button class="hotspot hotspot--yellow" style="--x:64%; --y:62%; --delay:1.2s;"
+                        data-hobby="reading" aria-pressed="false">
+                        <span class="hotspot-label">Reading</span>
+                        <span class="hotspot-icon" aria-hidden="true">📚</span>
+                        <span class="sr-only">Learn about my reading hobby</span>
+                    </button>
+
+                    <button class="hotspot hotspot--pink" style="--x:80%; --y:48%; --delay:1.6s;"
+                        data-hobby="crochetFlower" aria-pressed="false">
+                        <span class="hotspot-label">Crochet</span>
+                        <span class="hotspot-icon" aria-hidden="true">🧶</span>
+                        <span class="sr-only">Learn about my crochet hobby</span>
+                    </button>
+
+                    <button class="hotspot hotspot--blue" style="--x:92%; --y:36%; --delay:2s;"
+                        data-hobby="crochetCritters" aria-pressed="false">
+                        <span class="hotspot-label">Critters</span>
+                        <span class="hotspot-icon" aria-hidden="true">🐙</span>
+                        <span class="sr-only">Learn about my crochet critters hobby</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Fallback / accessible list of the same hotspots -->
+            <div class="hobby-chips" role="group" aria-label="Jump to a hobby">
+                <button class="hobby-chip" data-hobby="painting">🎨 Painting</button>
+                <button class="hobby-chip" data-hobby="pottery">🏺 Ceramics</button>
+                <button class="hobby-chip" data-hobby="florals">💐 Florals</button>
+                <button class="hobby-chip" data-hobby="reading">📚 Reading</button>
+                <button class="hobby-chip" data-hobby="crochetFlower">🧶 Crochet</button>
+                <button class="hobby-chip" data-hobby="crochetCritters">🐙 Critters</button>
+            </div>
+
+            <!-- Detail Panel -->
+            <div class="detail-panel" aria-live="polite">
+                <div class="detail-card" id="detailCard">
+                    <div class="detail-tab" id="detailTag">pick something up</div>
+                    <div class="detail-body-wrap">
+                        <span class="detail-emoji" id="detailEmoji">👋</span>
+                        <div>
+                            <h3 class="detail-title" id="detailTitle">start exploring</h3>
+                            <p class="detail-text" id="detailText">
+                                Click (or tap) on an object on the table to hear the story behind it.
+                            </p>
+                            <p class="detail-fact" id="detailFact"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Designed &amp; Researched by Shrina Tyarla • Soft Retro Aesthetic</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/coffee-table.js"></script>
 </body>
+
 </html>

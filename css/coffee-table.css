@@ -1,0 +1,335 @@
+/* ==========================================================================
+   COFFEE TABLE PAGE
+   Builds on the design tokens defined in style.css (:root variables,
+   fonts, card/shadow language). Do not redefine --bg-cream etc. here —
+   only add what's new for this page (wood tones for the table graphic).
+   ========================================================================== */
+
+:root {
+  --wood-highlight: #C99A72;
+  --wood-base: #A9784F;
+  --wood-dark: #7C5636;
+  --wood-shadow: #5E3F27;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------
+   1. HERO / INTRO
+   -------------------------------------------------------------------- */
+.coffee-hero {
+  width: 100%;
+  max-width: 1140px;
+  margin: 1rem auto 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.coffee-hero-inner {
+  text-align: center;
+  padding: clamp(2rem, 4vw, 3rem) 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-grid);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0px var(--soft-blue);
+}
+
+.coffee-hero-inner .hero-title {
+  max-width: 640px;
+}
+
+.coffee-hero-inner .hero-subtitle {
+  max-width: 560px;
+}
+
+/* --------------------------------------------------------------------
+   2. TABLE FRAME
+   -------------------------------------------------------------------- */
+.table-frame {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+}
+
+.table-wrap {
+  position: relative;
+  margin: 0 auto 5.5rem auto;
+  max-width: 980px;
+}
+
+.table-surface {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.3 / 1;
+  min-height: 220px;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.06) 0 2px, transparent 2px 90px),
+    linear-gradient(180deg, var(--wood-highlight) 0%, var(--wood-base) 45%, var(--wood-dark) 100%);
+  border: 3px solid var(--text-charcoal);
+  border-radius: 18px;
+  box-shadow:
+    inset 0 0 50px rgba(0, 0, 0, 0.18),
+    8px 8px 0px var(--dusty-pink);
+}
+
+.table-leg {
+  position: absolute;
+  bottom: -54px;
+  width: 20px;
+  height: 66px;
+  background: linear-gradient(180deg, var(--wood-dark), var(--wood-shadow));
+  border: 2px solid var(--text-charcoal);
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.table-leg--left {
+  left: 9%;
+  transform: rotate(-5deg);
+}
+
+.table-leg--right {
+  right: 9%;
+  transform: rotate(5deg);
+}
+
+.table-shadow {
+  position: absolute;
+  bottom: -66px;
+  left: 50%;
+  width: 68%;
+  height: 22px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.22), transparent 72%);
+  filter: blur(2px);
+  z-index: -2;
+}
+
+/* --------------------------------------------------------------------
+   3. HOTSPOTS
+   -------------------------------------------------------------------- */
+.hotspot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: clamp(44px, 6vw, 62px);
+  height: clamp(44px, 6vw, 62px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px var(--text-charcoal);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, outline-color 0.2s ease;
+  animation: float 3.4s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.hotspot--pink {
+  background: var(--dusty-pink);
+}
+
+.hotspot--sage {
+  background: var(--sage-green);
+}
+
+.hotspot--blue {
+  background: var(--soft-blue);
+}
+
+.hotspot--yellow {
+  background: var(--sunshine-yellow);
+}
+
+.hotspot-icon {
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  pointer-events: none;
+}
+
+.hotspot:hover,
+.hotspot:focus-visible {
+  transform: translate(-50%, -50%) translateY(-5px) scale(1.12);
+  box-shadow: 5px 5px 0px var(--text-charcoal);
+  z-index: 5;
+}
+
+.hotspot.is-active {
+  outline: 3px solid var(--muted-red);
+  outline-offset: 3px;
+}
+
+.hotspot-label {
+  position: absolute;
+  bottom: 118%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--text-charcoal);
+  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.hotspot:hover .hotspot-label,
+.hotspot:focus-visible .hotspot-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hotspot {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .table-wrap {
+    margin-bottom: 4.5rem;
+  }
+
+  .table-leg {
+    height: 44px;
+    bottom: -38px;
+  }
+
+  .table-shadow {
+    bottom: -46px;
+  }
+}
+
+/* --------------------------------------------------------------------
+   4. HOBBY CHIPS (accessible / mobile-friendly fallback list)
+   -------------------------------------------------------------------- */
+.hobby-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.hobby-chip {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  background: #fff;
+  color: var(--text-charcoal);
+  border: 1.5px solid var(--text-charcoal);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.hobby-chip:hover,
+.hobby-chip:focus-visible {
+  background: var(--bg-cream);
+  transform: translateY(-2px);
+}
+
+.hobby-chip.is-active {
+  background: var(--muted-red);
+  border-color: var(--text-charcoal);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------
+   5. DETAIL PANEL
+   -------------------------------------------------------------------- */
+.detail-panel {
+  max-width: 720px;
+  margin: 2.5rem auto 0 auto;
+}
+
+.detail-card {
+  --accent: var(--dusty-pink);
+  position: relative;
+  background: #ffffff;
+  border: 2px solid var(--text-charcoal);
+  border-radius: 0 16px 16px 16px;
+  box-shadow: 6px 6px 0px var(--accent);
+  padding: 1.75rem;
+  transition: box-shadow 0.25s ease;
+}
+
+.detail-tab {
+  position: absolute;
+  top: -30px;
+  left: -2px;
+  background: var(--accent);
+  border: 2px solid var(--text-charcoal);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.25rem 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  transition: background 0.25s ease;
+}
+
+.detail-body-wrap {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: opacity 0.18s ease;
+}
+
+.detail-card.is-updating .detail-body-wrap {
+  opacity: 0;
+}
+
+.detail-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.detail-title {
+  font-family: 'Newsreader', serif;
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  color: var(--text-charcoal);
+  text-transform: lowercase;
+}
+
+.detail-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.detail-fact {
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  color: var(--muted-red);
+  margin-top: 0.85rem;
+  line-height: 1.3;
+}
