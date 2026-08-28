@@ -2,7 +2,7 @@
    COFFEE TABLE PAGE
    Builds on the design tokens defined in style.css (:root variables,
    fonts, card/shadow language). Do not redefine --bg-cream etc. here —
-   only add what's new for this page (wood tones for the table graphic).
+   only add what's new for this page (wood tones + illustration fills).
    ========================================================================== */
 
 :root {
@@ -88,6 +88,7 @@
   box-shadow:
     inset 0 0 50px rgba(0, 0, 0, 0.18),
     8px 8px 0px var(--dusty-pink);
+  overflow: visible;
 }
 
 .table-leg {
@@ -123,91 +124,6 @@
   z-index: -2;
 }
 
-/* --------------------------------------------------------------------
-   3. HOTSPOTS
-   -------------------------------------------------------------------- */
-.hotspot {
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  transform: translate(-50%, -50%);
-  width: clamp(44px, 6vw, 62px);
-  height: clamp(44px, 6vw, 62px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--text-charcoal);
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 3px 3px 0px var(--text-charcoal);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, outline-color 0.2s ease;
-  animation: float 3.4s ease-in-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-
-.hotspot--pink {
-  background: var(--dusty-pink);
-}
-
-.hotspot--sage {
-  background: var(--sage-green);
-}
-
-.hotspot--blue {
-  background: var(--soft-blue);
-}
-
-.hotspot--yellow {
-  background: var(--sunshine-yellow);
-}
-
-.hotspot-icon {
-  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
-  pointer-events: none;
-}
-
-.hotspot:hover,
-.hotspot:focus-visible {
-  transform: translate(-50%, -50%) translateY(-5px) scale(1.12);
-  box-shadow: 5px 5px 0px var(--text-charcoal);
-  z-index: 5;
-}
-
-.hotspot.is-active {
-  outline: 3px solid var(--muted-red);
-  outline-offset: 3px;
-}
-
-.hotspot-label {
-  position: absolute;
-  bottom: 118%;
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  background: var(--text-charcoal);
-  color: #fff;
-  font-family: var(--font-pixel);
-  font-size: 0.68rem;
-  letter-spacing: 0.02em;
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-}
-
-.hotspot:hover .hotspot-label,
-.hotspot:focus-visible .hotspot-label {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hotspot {
-    animation: none;
-  }
-}
-
 @media (max-width: 640px) {
   .table-wrap {
     margin-bottom: 4.5rem;
@@ -224,7 +140,199 @@
 }
 
 /* --------------------------------------------------------------------
-   4. HOBBY CHIPS (accessible / mobile-friendly fallback list)
+   3. HOTSPOTS
+   Each object is positioned by its horizontal center (--left) and how
+   far its base sits from the front edge of the table (--bottom), then
+   sized by --w (percentage of the table's width). The button itself
+   only handles position + hover lift; the inner .hotspot-float span
+   handles the idle rotate/bob animation, so the two never fight over
+   the `transform` property.
+   -------------------------------------------------------------------- */
+.hotspot {
+  position: absolute;
+  left: calc(var(--left) - (var(--w) / 2));
+  bottom: var(--bottom);
+  width: var(--w);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.hotspot:hover,
+.hotspot:focus-visible {
+  transform: translateY(-8px) scale(1.06);
+  z-index: 6;
+}
+
+.hotspot.is-active {
+  z-index: 4;
+}
+
+.hotspot-float {
+  display: block;
+  transform-origin: bottom center;
+  animation: objectFloat 3.6s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.28));
+  transition: filter 0.2s ease;
+}
+
+.hotspot-float svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.hotspot:hover .hotspot-float,
+.hotspot:focus-visible .hotspot-float {
+  filter: drop-shadow(3px 9px 7px rgba(0, 0, 0, 0.35));
+}
+
+.hotspot.is-active .hotspot-float {
+  filter: drop-shadow(0 0 9px var(--muted-red)) drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.28));
+}
+
+@keyframes objectFloat {
+  0%, 100% {
+    transform: rotate(var(--rot, 0deg)) translateY(0);
+  }
+  50% {
+    transform: rotate(var(--rot, 0deg)) translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hotspot-float {
+    animation: none;
+    transform: rotate(var(--rot, 0deg));
+  }
+}
+
+.hotspot-label {
+  position: absolute;
+  top: -1.7rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--text-charcoal);
+  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 7;
+}
+
+.hotspot:hover .hotspot-label,
+.hotspot:focus-visible .hotspot-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------
+   4. ILLUSTRATION FILL / STROKE UTILITIES
+   Shared by every hotspot SVG and the default detail-panel icon, so
+   every illustration automatically follows the site's mood-board
+   palette (style.css :root) plus the wood tones defined above.
+   -------------------------------------------------------------------- */
+.icon-outline {
+  fill: none;
+  stroke: var(--text-charcoal);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-outline-thin {
+  fill: none;
+  stroke: var(--text-charcoal);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.45;
+}
+
+.icon-line-outline {
+  fill: none;
+  stroke: var(--text-charcoal);
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+
+.icon-line-blue {
+  fill: none;
+  stroke: var(--soft-blue);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.icon-white {
+  fill: #ffffff;
+  stroke: var(--text-charcoal);
+  stroke-width: 3;
+}
+
+.icon-cream {
+  fill: var(--bg-cream);
+  stroke: var(--text-charcoal);
+  stroke-width: 3;
+}
+
+.icon-wood {
+  fill: var(--wood-base);
+  stroke: var(--text-charcoal);
+  stroke-width: 3;
+}
+
+.icon-wood-hole {
+  fill: var(--wood-base);
+  stroke: var(--text-charcoal);
+  stroke-width: 2;
+}
+
+.icon-pink {
+  fill: var(--dusty-pink);
+  stroke: var(--text-charcoal);
+  stroke-width: 2.5;
+}
+
+.icon-sage {
+  fill: var(--sage-green);
+  stroke: var(--text-charcoal);
+  stroke-width: 2.5;
+}
+
+.icon-blue {
+  fill: var(--soft-blue);
+  stroke: var(--text-charcoal);
+  stroke-width: 2.5;
+}
+
+.icon-yellow {
+  fill: var(--sunshine-yellow);
+  stroke: var(--text-charcoal);
+  stroke-width: 2.5;
+}
+
+.icon-red {
+  fill: var(--muted-red);
+  stroke: none;
+}
+
+.icon-dot {
+  fill: var(--text-charcoal);
+  stroke: none;
+}
+
+/* --------------------------------------------------------------------
+   5. HOBBY CHIPS (accessible / mobile-friendly fallback list)
    -------------------------------------------------------------------- */
 .hobby-chips {
   display: flex;
@@ -235,6 +343,10 @@
 }
 
 .hobby-chip {
+  --dot: var(--dusty-pink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.85rem;
@@ -245,6 +357,16 @@
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.hobby-chip::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--dot);
+  border: 1.3px solid var(--text-charcoal);
+  flex-shrink: 0;
 }
 
 .hobby-chip:hover,
@@ -260,7 +382,7 @@
 }
 
 /* --------------------------------------------------------------------
-   5. DETAIL PANEL
+   6. DETAIL PANEL
    -------------------------------------------------------------------- */
 .detail-panel {
   max-width: 720px;
@@ -305,10 +427,16 @@
   opacity: 0;
 }
 
-.detail-emoji {
-  font-size: 2.2rem;
-  line-height: 1;
+.detail-icon {
+  display: block;
+  width: clamp(48px, 9vw, 64px);
   flex-shrink: 0;
+}
+
+.detail-icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .detail-title {
