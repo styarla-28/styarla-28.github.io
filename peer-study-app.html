@@ -1,354 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: [Project Title] | UX Research Log</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: CBIT Study Buddy | shrina.ux</title>
 
-    <!-- Google Fonts: Syne, Outfit, Caveat, VT323, Newsreader -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;600;800&family=VT323&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&family=VT323&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-    <!-- Subtle Grain Overlay -->
-    <div class="grain-overlay"></div>
+  <div class="grain-overlay"></div>
 
-    <!-- Header / Navigation -->
-    <header class="site-header">
-        <a href="index.html" class="logo-link">
-            <div class="logo-text">research<span class="dot">.</span>log</div>
-        </a>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="index.html#about" class="nav-item">About</a>
-            <a href="projects.html" class="nav-item active">Projects</a>
-            <a href="mailto:hello@example.com" class="nav-item btn-nav">Contact</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <span class="logo-text">shrina<span class="dot">.</span>ux</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item active">Home</a>
+      <a href="projects.html" class="nav-item">Work</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="coffee-table.html" class="nav-item badge-nav">Coffee Table ☕</a>
+      <a href="contact.html" class="nav-item btn-nav">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: THE COVER
+       ========================================================================== -->
+  <section class="case-cover">
+    <div class="case-cover-container">
+
+      <div class="category-badges">
+        <span class="badge-pixel">★ CASE FILE #01 ★</span>
+        <span class="tag-pill tag-interaction">Interaction Design</span>
+        <span class="tag-pill tag-research">UX Research</span>
+      </div>
+
+      <h1 class="case-title">Building the study group CBIT students kept forming in hallways — just, on purpose this time.</h1>
+      <p class="case-one-liner">A peer-matching app for a 5,000-student engineering college where a 70:1 classroom ratio makes it nearly impossible to get help — so students were already improvising their own solution. I designed the tool to make that easier.</p>
+
+      <div class="meta-dossier-grid">
+        <div class="meta-item">
+          <span class="meta-label">MY ROLE</span>
+          <span class="meta-value">Researcher + Designer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TIMELINE</span>
+          <span class="meta-value">Solo project</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TEAM SIZE</span>
+          <span class="meta-value">Solo</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TOOLKIT / METHODS</span>
+          <span class="meta-value">Competitive Analysis, Paper Prototyping, Figma, QOC Analysis</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hero media intentionally omitted — to be added later -->
+
+  <main class="case-body">
 
     <!-- ==========================================================================
-       SECTION 1: THE COVER (Top of page, always visible)
-       ========================================================================== -->
-    <section class="case-cover">
-        <div class="case-cover-container grid-background">
-
-            <!-- Category Badges -->
-            <div class="category-badges">
-                <span class="badge-pixel">★ CASE FILE #007 ★</span>
-                <span class="tag-pill tag-research">Light UX Research</span>
-                <span class="tag-pill tag-ai">Interaction Design</span>
-            </div>
-
-            <!-- Project Title & One-Liner -->
-            <h1 class="case-title">Building the study group CBIT students kept forming in hallways (on purpose this
-                time)</h1>
-            <p class="case-one-liner">A peer-matching app for a 5,000-student engineering college
-                where the classroom ratio makes it nearly impossible to get help. I designed the tool
-                to make that easier.</p>
-
-            <!-- Meta Row (Scannable Grid for Recruiters) -->
-            <div class="meta-dossier-grid">
-                <div class="meta-item">
-                    <span class="meta-label">MY ROLE</span>
-                    <span class="meta-value">Lead Researcher + Designer</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">TIMELINE</span>
-                    <span class="meta-value">4 Months (January 2026 - April 2067)</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">TEAM SIZE</span>
-                    <span class="meta-value">Just me, myself and I</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">TOOLKIT / METHODS</span>
-                    <span class="meta-value">Feature Designing, Wireframing, Figma Prototyping</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- HERO MEDIA (Optional Lead Hero Banner / Hero Shot) -->
-    <div class="case-hero-media">
-        <div class="media-container">
-            <img src="https://placehold.co/1200x675/1e1e1e/FFF?text=Hero+Image+or+Interactive+Prototype+Preview"
-                alt="Main hero preview of the project" class="responsive-media">
-            <span class="media-caption">Figure 1.0: Final interactive prototype showing the overhauled step 3 mental
-                model.</span>
-        </div>
-    </div>
-
-    <!-- MAIN CASE STUDY CONTENT CONTAINER -->
-    <main class="case-body">
-
-        <!-- ==========================================================================
          SECTION 2: THE TL;DR
          ========================================================================== -->
-        <div class="tldr-box">
-            <div class="tldr-header">
-                <span class="tldr-badge">⚡ THE TL;DR</span>
-            </div>
-            <p class="tldr-text">
-                CBIT has a 70:1 student-to-faculty ratio, so professors don't have the
-                bandwidth to answer everyone's questions. But, students had already found
-                their own workaround: clustering together before exams to teach each other.
-                I designed CBIT Study Buddy, an app that turns that informal habit into
-                something findable and repeatable, with a buddy-matching system and a
-                shared notes repository, so peer learning doesn't have to depend on
-                already knowing the right people.
-            </p>
+    <div class="tldr-box">
+      <div class="tldr-header">
+        <span class="tldr-badge">⚡ THE QUICK RECEIPTS (TL;DR)</span>
+      </div>
+      <p class="tldr-text">
+        <strong>The Problem:</strong> CBIT has a 70:1 student-to-faculty ratio, so professors don't have the bandwidth to answer everyone's questions — but students had already found their own workaround: clustering together before exams to teach each other.<br>
+        <strong>What I Did:</strong> Ran a competitive analysis of existing study-matching apps, then designed and prototyped (paper → Figma) an app that turns that informal habit into something findable and repeatable.<br>
+        <strong>Headline Outcome:</strong> A validated design direction — <strong>buddy-matching + a shared notes repository</strong> — with usability testing as the clear next step.
+      </p>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 3: THE SCENE
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">01.</span> The Scene <span class="sub-title-playful">// "70 people, one professor"</span></h2>
+
+      <p class="case-p">
+        Picture a lecture hall built for 70 students per professor. That's not a typo — that's the actual ratio at Chaitanya Bharathi Institute of Technology. When you're one of 70, "raise your hand and ask" isn't realistic, and professors are optimizing for getting through the syllabus, not for making sure everyone follows along.
+      </p>
+
+      <p class="case-p">
+        So students adapted. Around midterms and finals, you'd see it everywhere — small clusters on the lawn, in hallways, wherever there was space, students explaining concepts to each other because nobody else had the bandwidth to. It clearly worked. It just only happened when the stakes were high enough to force it, and only among people who already knew each other.
+      </p>
+
+      <blockquote class="handwritten-quote">
+        "Finding people to study with is hard. Is there a place to find study buddies?"
+        <cite>— framing question that shaped the design direction</cite>
+      </blockquote>
+
+      <p class="case-p">
+        That gap became my research question: <em>how can we promote collaboration among CBIT students and make peer learning a consistent practice, not just a pre-finals scramble?</em>
+      </p>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: WHAT I ACTUALLY DID
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">02.</span> What I Actually Did <span class="sub-title-playful">// "Doing the real homework"</span></h2>
+
+      <p class="case-p">
+        Three directions came out of thinking through the problem space: paper fliers for students to post contact info, designated open study spaces around campus, or an app to help students find study buddies and share notes. I moved forward with structured research to figure out which — if any — was actually worth building.
+      </p>
+
+      <ul class="rigor-list">
+        <li><strong>Research Question:</strong> How can we promote collaboration in CBIT students and make peer learning a consistent practice in their academic journey?</li>
+        <li><strong>Competitive Analysis:</strong> Evaluated four existing tools in the studying/note-sharing space — StudyStream, Navigate360's Study Buddy feature, StudyBuddy.it, and Tirimiri — to see what already works and where they fall short for a single-campus, shared-course-catalog use case.</li>
+        <li><strong>Prototyping Progression:</strong> Paper prototype first (to test structure before touching software), then a full digital prototype in Figma covering buddy search, buddy/group profiles, request-sending, and the notes repository.</li>
+        <li><strong>Decision Framework:</strong> Used QOC (Questions/Options/Criteria) analysis to make deliberate, arguable calls about target audience fit and feature scope, rather than relying on instinct alone.</li>
+      </ul>
+
+      <div class="media-note">[ competitive analysis grid + paper prototype photos go here ]</div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: THE MESSY MIDDLE
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">03.</span> The Messy Middle <span class="sub-title-playful">// "The easy answer wasn't the right one"</span></h2>
+
+      <p class="case-p">
+        The honest version: the easy answer here was to just build a Find-a-Buddy matching feature and call it done. That would have technically solved the literal problem statement.
+      </p>
+
+      <div class="callout-box warning-box">
+        <span class="callout-icon">⚠️</span>
+        <div>
+          <strong>The Pivot:</strong> Sitting with the QOC analysis surfaced something the simple version would've missed — not every student who needs peer learning wants to go through the (slightly vulnerable) process of finding and messaging a stranger to study with. Some would rather learn from what others have already shared, without the social step of "finding a buddy" at all. That's the actual reason Notes Repo exists as its own feature, not just a bonus — it's a second on-ramp into the same goal for people who wouldn't take the first one.
         </div>
+      </div>
 
-        <!-- ==========================================================================
-         SECTION 3: THE SCENE (Setting up the problem)
+      <div class="media-note">[ paper prototype vs. Figma prototype comparison goes here ]</div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: THE FIX
          ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">01.</span> The Scene <span class="sub-title-playful">//
-                    "Houston, we have a leak"</span></h2>
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">04.</span> The Fix <span class="sub-title-playful">// "Designing with receipts"</span></h2>
 
-            <p class="case-p">
-                Every Monday morning, support tickets came in with some version of the same panicked sentence: <em>"I
-                    clicked complete, but I think I just got charged twice and I don't know why."</em> Nobody on the
-                product team could tell me how often it was actually happening. All we knew was that step 3 had a
-                drop-off graph that looked like a cliff.
-            </p>
+      <p class="case-p">
+        The through-line: every feature exists to keep peer learning happening inside the app CBIT students already trust, instead of the process fragmenting across WhatsApp for chat, email for notes, and word-of-mouth for finding people in the first place.
+      </p>
 
-            <p class="case-p">
-                The brief was originally given to me as <em>"Make the button green and fix the copy."</em> But design
-                problems are rarely just button colors. I decided to dig into what users were actually thinking when
-                they hit that page.
-            </p>
-
-            <!-- Handwritten Pull-Quote (One per case study rule) -->
-            <blockquote class="handwritten-quote">
-                "I felt like the interface was trying to trick me into a subscription. I just backed out."
-                <cite>— Participant #4, Moderated Usability Session</cite>
-            </blockquote>
-        </section>
-
-        <!-- ==========================================================================
-         SECTION 4: WHAT I ACTUALLY DID (The Rigor Section)
-         ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">02.</span> What I Actually Did <span
-                    class="sub-title-playful">// "Doing the real homework"</span></h2>
-
-            <p class="case-p">
-                I bypassed the assumptions and structured a 3-part research methodology focused on uncovering mental
-                model mismatches.
-            </p>
-
-            <ul class="rigor-list">
-                <li><strong>Research Questions:</strong> What specific visual cues cause trust breakdown at step 3? How
-                    do users calculate risk before hitting "Confirm"?</li>
-                <li><strong>Sample Size &amp; Demographics:</strong> 8 participants (4 prospective buyers, 4 existing
-                    customers upgrading plans) recruited via UserTesting.</li>
-                <li><strong>Methods Used:</strong> 45-minute think-aloud moderated usability sessions, followed by a
-                    card-sorting exercise to organize pricing priorities.</li>
-                <li><strong>Synthesis Method:</strong> Affinity mapping in FigJam to code emotional friction points
-                    (Confusion, Fear, Friction).</li>
-            </ul>
-
-            <!-- MEDIA PLACEHOLDER: Artifacts / Affinity Map Grid -->
-            <div class="media-grid-2col">
-                <div class="media-container">
-                    <img src="https://placehold.co/600x400/ece8df/333?text=FigJam+Affinity+Map+Screenshot"
-                        alt="Affinity mapping sticky notes" class="responsive-media">
-                    <span class="media-caption">Figure 2.1: Affinity map clustering participant pain points into 3
-                        primary themes.</span>
-                </div>
-                <div class="media-container">
-                    <img src="https://placehold.co/600x400/ece8df/333?text=Card+Sorting+Results" alt="Card sorting data"
-                        class="responsive-media">
-                    <span class="media-caption">Figure 2.2: Card sorting results revealing users wanted fee breakdowns
-                        earlier.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-         SECTION 5: THE MESSY MIDDLE (Pivots & Mistakes)
-         ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">03.</span> The Messy Middle <span
-                    class="sub-title-playful">// "When my first prototype failed"</span></h2>
-
-            <p class="case-p">
-                My first low-fidelity wireframe tested amazingly—right up until I realized I had accidentally biased the
-                test. I had shown it to internal team members who already understood our internal tax glossary!
-            </p>
-
-            <div class="callout-box warning-box">
-                <span class="callout-icon">⚠️</span>
-                <div>
-                    <strong>The Pivot:</strong> When I tested the exact same wireframe with 4 brand-new external
-                    participants during Round 2, 3 of them got stuck on the term "Authorization Hold." They thought it
-                    was a hidden penalty fee. I had to scrap the entire modal and redesign the transparency hierarchy
-                    from scratch.
-                </div>
-            </div>
-
-            <!-- VIDEO / GIF DEMO PLACEHOLDER -->
-            <div class="media-container">
-                <div class="video-placeholder">
-                    <div class="play-button">▶</div>
-                    <p>[ Screen Recording GIF / Video: Failed Flow vs Pivoted Flow ]</p>
-                </div>
-                <span class="media-caption">Figure 3.1: Video walkthrough comparing the initial failed modal against the
-                    revised inline callout.</span>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-         SECTION 6: THE FIX (Rationale & Solution)
-         ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">04.</span> The Fix <span class="sub-title-playful">//
-                    "Designing with receipts"</span></h2>
-
-            <p class="case-p">
-                Every pixel in the final design tied directly back to a research finding from our synthesis phase.
-            </p>
-
-            <!-- Solution Breakdown Grid -->
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <h4>Decision 01: Upfront Pricing Guarantee</h4>
-                    <p><strong>Backed by finding:</strong> 7/8 users expressed anxiety about "hidden fees." We added an
-                        explicit price breakdown card <em>before</em> credit card entry.</p>
-                </div>
-                <div class="solution-card">
-                    <h4>Decision 02: Progressive Disclosure Tooltips</h4>
-                    <p><strong>Backed by finding:</strong> Replacing jargon with micro-tooltips reduced support ticket
-                        inquiries related to billing terms down to zero during testing.</p>
-                </div>
-            </div>
-
-            <!-- BEFORE & AFTER COMPARISON MEDIA -->
-            <div class="before-after-wrapper">
-                <div class="media-container">
-                    <img src="https://placehold.co/550x350/ffe6e6/333?text=BEFORE:+Confusing+Step+3" alt="Old Interface"
-                        class="responsive-media">
-                    <span class="media-caption">BEFORE: Cluttered layout with hidden fee language.</span>
-                </div>
-                <div class="media-container">
-                    <img src="https://placehold.co/550x350/e6f2ff/333?text=AFTER:+Transparent+Flow" alt="New Interface"
-                        class="responsive-media">
-                    <span class="media-caption">AFTER: Clean hierarchy with upfront authorization breakdown.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-         SECTION 7: DID IT WORK? (Impact & Outcomes)
-         ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">05.</span> Did It Work? <span class="sub-title-playful">//
-                    "The scoreboard"</span></h2>
-
-            <div class="impact-metrics-bar">
-                <div class="metric-card">
-                    <span class="metric-number">1/8</span>
-                    <span class="metric-label">Task confusion in validation testing (down from 6/8)</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">+28%</span>
-                    <span class="metric-label">Checkout completion rate post-launch</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">-45%</span>
-                    <span class="metric-label">Reduction in billing-related support tickets</span>
-                </div>
-            </div>
-
-            <p class="case-p">
-                Beyond the quantitative metrics, the qualitative victory was clear: during final validation tests,
-                participants stopped pausing at step 3 altogether. They sailed right through to payment confirmation
-                without asking a single clarification question.
-            </p>
-        </section>
-
-        <!-- ==========================================================================
-         SECTION 8: BEHIND THE SCENES (Reflection & Retrospective)
-         ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">06.</span> Behind the Scenes <span
-                    class="sub-title-playful">// "Director's Commentary"</span></h2>
-
-            <div class="commentary-box">
-                <p>
-                    If I were doing this project again today, I would involve the engineering team in the second round
-                    of user interviews. We lost 3 days debating whether progressive disclosure was technically feasible
-                    when a simple CSS accordion could have solved it immediately. I learned that showing devs a
-                    30-second clip of a user struggling is 10x more effective than writing a 10-page spec document.
-                </p>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-         SECTION 9: SOUVENIRS (Artifacts & External Links)
-         ========================================================================== -->
-        <section class="case-section">
-            <h2 class="section-title"><span class="title-num">07.</span> Souvenirs <span class="sub-title-playful">//
-                    "Take one home with you"</span></h2>
-
-            <p class="case-p">Want to inspect the raw materials? Feel free to dive into the actual project deliverables
-                below:</p>
-
-            <div class="souvenirs-grid">
-                <a href="https://drive.google.com/file/d/1b0p_dgz1aRIr2gUyFwhJnT4V1Vozf5mp/view?usp=drive_link"
-                    target="_blank" class="souvenir-card">
-                    <span class="souvenir-icon">🎨</span>
-                    <div>
-                        <strong>Design Prototype Walkthrough</strong>
-                        <p>Click through the full validated flow.</p>
-                    </div>
-                    <span class="arrow">↗</span>
-                </a>
-
-                <a href="#" target="_blank" class="souvenir-card">
-                    <span class="souvenir-icon">📄</span>
-                    <div>
-                        <strong>Research Report Deck (PDF)</strong>
-                        <p>12-slide executive summary shared with leadership.</p>
-                    </div>
-                    <span class="arrow">↗</span>
-                </a>
-
-                <a href="#" target="_blank" class="souvenir-card">
-                    <span class="souvenir-icon">💻</span>
-                    <div>
-                        <strong>GitHub Repository</strong>
-                        <p>View the front-end code for the design system components.</p>
-                    </div>
-                    <span class="arrow">↗</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- BOTTOM NEXT/PREV NAVIGATION -->
-        <div class="case-bottom-nav">
-            <a href="projects.html" class="btn-primary">← Back to All Projects</a>
-            <a href="#" class="btn-primary" style="background-color: var(--soft-blue);">Next Project: AI Prompt Audit
-                ➔</a>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <h4>Feature 01: Find a Buddy</h4>
+          <p><strong>Backed by finding:</strong> students already study in ad hoc clusters — but only when they already know each other. Search and filter by person or group, and view a buddy's courses and availability before requesting, so it's not messaging blind.</p>
         </div>
+        <div class="solution-card">
+          <h4>Feature 02: Buddy Chats</h4>
+          <p><strong>Backed by finding:</strong> coordination was previously scattered across outside apps. A dedicated space to actually coordinate and share materials once a request is accepted keeps it in one place.</p>
+        </div>
+        <div class="solution-card">
+          <h4>Feature 03: Notes Repo</h4>
+          <p><strong>Backed by finding:</strong> the QOC analysis showed not everyone wants the social step of finding a buddy. Save notes to a personal dashboard, publish publicly, and explore by subject — a no-social-risk path into peer learning.</p>
+        </div>
+      </div>
 
-    </main>
+      <div class="media-note">[ before/after or key screen walkthroughs go here ]</div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>Case File Completed. Designed &amp; Coded with ☕.</p>
-    </footer>
+    <!-- ==========================================================================
+         SECTION 7: DID IT WORK?
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">05.</span> Did It Work? <span class="sub-title-playful">// "The honest scoreboard"</span></h2>
+
+      <div class="impact-metrics-bar">
+        <div class="metric-card">
+          <span class="metric-number">3</span>
+          <span class="metric-label">Core features designed and traceable to a real finding</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">2</span>
+          <span class="metric-label">Prototype fidelities — paper, then Figma</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">4</span>
+          <span class="metric-label">Competitor apps analyzed to sharpen the design direction</span>
+        </div>
+      </div>
+
+      <p class="case-p">
+        This one's honest, not padded: the project moved through competitive analysis, paper prototyping, and a full Figma prototype — it wasn't usability-tested with CBIT students or deployed, so there aren't task-completion numbers or before/after metrics to point to yet. What I do have is a design that's traceable back to a real, specific constraint (the 70:1 ratio) and a real existing behavior (students already forming ad hoc study groups), rather than a hypothetical one.
+      </p>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: BEHIND THE SCENES
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">06.</span> Behind the Scenes <span class="sub-title-playful">// "Director's Commentary"</span></h2>
+
+      <div class="commentary-box">
+        <p>
+          Designing for a specific community changes the brief — this wasn't "design a study app" in the abstract, every decision had to make sense for one real campus with one shared course catalog. The Find-a-Buddy vs. Notes Repo split came directly from realizing "peer learning" isn't one behavior, it's several, with different comfort levels attached. If I did this again, I'd get even 3–5 people to click through the Figma prototype before calling it done — a prototype is a conversation starter, not an answer, and I'd want to see where it actually breaks.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: SOUVENIRS
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">07.</span> Souvenirs <span class="sub-title-playful">// "Take one home with you"</span></h2>
+
+      <p class="case-p">Want to inspect the raw materials? Links coming soon:</p>
+
+      <div class="souvenirs-grid">
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">🎨</span>
+          <div>
+            <strong>Figma Prototype Walkthrough</strong>
+            <p>Link to be added</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">📄</span>
+          <div>
+            <strong>Original Presentation Deck</strong>
+            <p>Link to be added</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">📝</span>
+          <div>
+            <strong>Paper Prototype Photos</strong>
+            <p>Link to be added</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="case-bottom-nav">
+      <a href="projects.html" class="btn-primary">← Back to All Projects</a>
+      <a href="case-study-baby2home.html" class="btn-primary" style="background-color: var(--color-blue); color: var(--color-ink);">Next Project: Baby2Home ➔</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Case File Closed (for now). Designed &amp; coded with ☕.</p>
+  </footer>
 
 </body>
-
 </html>

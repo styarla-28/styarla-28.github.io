@@ -3,82 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Study: [Project Title] | UX Research Log</title>
+  <title>Case Study: Baby2Home | jordan.ux</title>
 
-  <!-- Google Fonts: Syne, Outfit, Caveat, VT323, Newsreader -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;600;800&family=VT323&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&family=VT323&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Subtle Grain Overlay -->
   <div class="grain-overlay"></div>
 
-  <!-- Header / Navigation -->
   <header class="site-header">
     <a href="index.html" class="logo-link">
-      <div class="logo-text">research<span class="dot">.</span>log</div>
+      <span class="logo-text">shrina<span class="dot">.</span>ux</span>
     </a>
     <nav class="nav-links">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="index.html#about" class="nav-item">About</a>
-      <a href="projects.html" class="nav-item active">Projects</a>
-      <a href="mailto:hello@example.com" class="nav-item btn-nav">Contact</a>
+      <a href="index.html" class="nav-item active">Home</a>
+      <a href="projects.html" class="nav-item">Work</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="coffee-table.html" class="nav-item badge-nav">Coffee Table ☕</a>
+      <a href="contact.html" class="nav-item btn-nav">Contact</a>
     </nav>
   </header>
 
   <!-- ==========================================================================
-       SECTION 1: THE COVER (Top of page, always visible)
+       SECTION 1: THE COVER
        ========================================================================== -->
   <section class="case-cover">
-    <div class="case-cover-container grid-background">
+    <div class="case-cover-container">
 
-      <!-- Category Badges -->
       <div class="category-badges">
-        <span class="badge-pixel">★ CASE FILE #007 ★</span>
+        <span class="badge-pixel">★ CASE FILE #02 ★</span>
         <span class="tag-pill tag-research">UX Research</span>
         <span class="tag-pill tag-ai">AI Strategy</span>
       </div>
 
-      <!-- Project Title & One-Liner -->
-      <h1 class="case-title">Teaching a booking flow to stop losing people at step 3.</h1>
-      <p class="case-one-liner">A mixed-methods deep dive into why enterprise users were abandoning their carts right before checkout—and how fixing a mental model mismatch saved $120k in dropped revenue.</p>
+      <span class="status-banner">🟡 IN PROGRESS — Phase 1 of 5 (as of Aug 2026)</span>
 
-      <!-- Meta Row (Scannable Grid for Recruiters) -->
+      <h1 class="case-title">Designing an AI-integrated dashboard for the people managing dozens of caseloads in perinatal care.</h1>
+      <p class="case-one-liner">Baby2Home is a digital health platform for perinatal collaborative care. I'm researching and designing an AI-integrated registry dashboard for their care managers — grounded in clinical standards, but shaped by what care managers actually trust and need.</p>
+
       <div class="meta-dossier-grid">
         <div class="meta-item">
           <span class="meta-label">MY ROLE</span>
-          <span class="meta-value">Lead UX Researcher</span>
+          <span class="meta-value">Research Intern (UX Research + Design)</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">TIMELINE</span>
-          <span class="meta-value">6 Weeks (Q2 2026)</span>
+          <span class="meta-value">Jul 2026 – Apr 2027 (in progress)</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">TEAM SIZE</span>
-          <span class="meta-value">1 Researcher, 2 Designers, 3 Devs</span>
+          <span class="meta-value">Baby2Home research team</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">TOOLKIT / METHODS</span>
-          <span class="meta-value">Usability Testing, LLM Prompting, Figma</span>
+          <span class="meta-value">Framework Analysis, Semi-Structured Interviews, Thematic Coding, Wireframing</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- HERO MEDIA (Optional Lead Hero Banner / Hero Shot) -->
-  <div class="case-hero-media">
-    <div class="media-container">
-      <img src="https://placehold.co/1200x675/1e1e1e/FFF?text=Hero+Image+or+Interactive+Prototype+Preview" alt="Main hero preview of the project" class="responsive-media">
-      <span class="media-caption">Figure 1.0: Final interactive prototype showing the overhauled step 3 mental model.</span>
-    </div>
-  </div>
+  <!-- Hero media intentionally omitted — to be added later -->
 
-  <!-- MAIN CASE STUDY CONTENT CONTAINER -->
   <main class="case-body">
 
     <!-- ==========================================================================
@@ -89,213 +84,212 @@
         <span class="tldr-badge">⚡ THE QUICK RECEIPTS (TL;DR)</span>
       </div>
       <p class="tldr-text">
-        <strong>The Problem:</strong> 42% of users abandoned the SaaS booking flow on the confirmation page because hidden authorization fees triggered panic.<br>
-        <strong>What I Did:</strong> Conducted 8 moderated usability interviews, mapped out the team's flawed mental model assumptions, and rapid-prototyped a transparent fee breakdown.<br>
-        <strong>Headline Outcome:</strong> Reduced task confusion from <strong>6/8 participants to 1/8</strong> in round 2 testing and cut checkout drop-offs by 28% post-launch.
+        <strong>The Problem:</strong> Care managers coordinating perinatal collaborative care don't have a registry dashboard built for how AI could actually help them — existing clinical standards define solid baseline registry functions, but none account for things like disengagement prediction or automated caseload summarization.<br>
+        <strong>What I'm Doing:</strong> Running a research process that uses established frameworks (AIMS Center, AHRQ) as the floor, caregiver interviews to localize requirements to Baby2Home, and direct testing of candidate AI features with care managers before any feature gets locked into a design.<br>
+        <strong>Status:</strong> Wireframe due <strong>December 2026</strong>. Currently in literature review and framework analysis.
       </p>
     </div>
 
     <!-- ==========================================================================
-         SECTION 3: THE SCENE (Setting up the problem)
+         SECTION 3: THE SCENE
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">01.</span> The Scene <span class="sub-title-playful">// "Houston, we have a leak"</span></h2>
-      
+      <h2 class="section-title"><span class="title-num">01.</span> The Scene <span class="sub-title-playful">// "The gap wasn't where I expected it"</span></h2>
+
       <p class="case-p">
-        Every Monday morning, support tickets came in with some version of the same panicked sentence: <em>"I clicked complete, but I think I just got charged twice and I don't know why."</em> Nobody on the product team could tell me how often it was actually happening. All we knew was that step 3 had a drop-off graph that looked like a cliff.
+        Collaborative Care Model registries have been studied for a while — the AIMS Center and AHRQ have both published solid frameworks for what a patient registry dashboard needs to do. So going in, I expected the gap in Baby2Home's dashboard to be a gap in coverage — missing fields, missing views, the usual.
       </p>
 
       <p class="case-p">
-        The brief was originally given to me as <em>"Make the button green and fix the copy."</em> But design problems are rarely just button colors. I decided to dig into what users were actually thinking when they hit that page.
+        It wasn't. When I mapped the existing literature across collaborative care registries, patient registry frameworks, clinical dashboard/HCI design, and the newer AI-supported learning health system research, the core registry functions were well established and largely consistent across sources. What was consistently absent — across all four literature categories — was any real treatment of AI-driven prioritization, disengagement prediction, automated summarization, intelligent recommendations, workload balancing, or integrated maternal-infant-family tracking.
       </p>
 
-      <!-- Handwritten Pull-Quote (One per case study rule) -->
       <blockquote class="handwritten-quote">
-        "I felt like the interface was trying to trick me into a subscription. I just backed out."
-        <cite>— Participant #4, Moderated Usability Session</cite>
+        "Not what does a CCM registry need — that's already well answered. Where could AI actually extend it, and would care managers trust that?"
+        <cite>— the reframed research question</cite>
       </blockquote>
     </section>
 
     <!-- ==========================================================================
-         SECTION 4: WHAT I ACTUALLY DID (The Rigor Section)
+         SECTION 4: WHAT I'M ACTUALLY DOING
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">02.</span> What I Actually Did <span class="sub-title-playful">// "Doing the real homework"</span></h2>
+      <h2 class="section-title"><span class="title-num">02.</span> What I'm Actually Doing <span class="sub-title-playful">// "Five phases, one hard deadline"</span></h2>
 
-      <p class="case-p">
-        I bypassed the assumptions and structured a 3-part research methodology focused on uncovering mental model mismatches.
-      </p>
-
+      <p class="case-p"><strong>Phase 1 — Foundation &amp; Framework Analysis</strong> (Jul–Aug 2026, current phase):</p>
       <ul class="rigor-list">
-        <li><strong>Research Questions:</strong> What specific visual cues cause trust breakdown at step 3? How do users calculate risk before hitting "Confirm"?</li>
-        <li><strong>Sample Size &amp; Demographics:</strong> 8 participants (4 prospective buyers, 4 existing customers upgrading plans) recruited via UserTesting.</li>
-        <li><strong>Methods Used:</strong> 45-minute think-aloud moderated usability sessions, followed by a card-sorting exercise to organize pricing priorities.</li>
-        <li><strong>Synthesis Method:</strong> Affinity mapping in FigJam to code emotional friction points (Confusion, Fear, Friction).</li>
+        <li><strong>Literature review</strong> across four categories: CCM registries, patient registry frameworks (AHRQ), clinical dashboard/HCI design, and AI-supported care management research.</li>
+        <li><strong>Framework analysis</strong> mapping AIMS Center's workflow requirements and AHRQ's structural requirements directly onto Baby2Home, to confirm exactly which AI-related gaps neither framework addresses.</li>
+        <li><strong>Interview protocol design</strong> — a semi-structured guide including a dedicated module that walks care managers through six candidate AI features to gauge trust, desirability, and workflow fit for each.</li>
       </ul>
 
-      <!-- MEDIA PLACEHOLDER: Artifacts / Affinity Map Grid -->
-      <div class="media-grid-2col">
-        <div class="media-container">
-          <img src="https://placehold.co/600x400/ece8df/333?text=FigJam+Affinity+Map+Screenshot" alt="Affinity mapping sticky notes" class="responsive-media">
-          <span class="media-caption">Figure 2.1: Affinity map clustering participant pain points into 3 primary themes.</span>
+      <p class="case-p">The roadmap ahead:</p>
+
+      <div class="solution-grid">
+        <div class="solution-card">
+          <h4>Phase 2 — Discovery (Aug–Oct 2026)</h4>
+          <p>Recruiting care managers, clinicians, and therapists across partner sites; one-on-one interviews plus workflow shadowing where possible, testing reactions to the candidate AI features alongside standard workflow questions.</p>
         </div>
-        <div class="media-container">
-          <img src="https://placehold.co/600x400/ece8df/333?text=Card+Sorting+Results" alt="Card sorting data" class="responsive-media">
-          <span class="media-caption">Figure 2.2: Card sorting results revealing users wanted fee breakdowns earlier.</span>
+        <div class="solution-card">
+          <h4>Phase 3 — Synthesis (Oct–Nov 2026)</h4>
+          <p>Consolidating interview findings with the framework analysis into core dashboard requirements, then scoring six candidate AI features on desirability, trust, and workflow fit to select 2–3 to actually design.</p>
+        </div>
+        <div class="solution-card">
+          <h4>Phase 4 — Wireframe Design (Nov–Dec 2026)</h4>
+          <p>Low-fidelity sketches, then iterative wireframes tested specifically for whether the AI features read as clear and trustworthy — not just usable. Final wireframe delivered to Baby2Home stakeholders in December.</p>
+        </div>
+        <div class="solution-card">
+          <h4>Phase 5 — Validation &amp; Dissemination (Jan–Apr 2027)</h4>
+          <p>Usability/heuristic review of the locked wireframe, and manuscript writing framing the AI-integration gap as the paper's contribution.</p>
         </div>
       </div>
+
+      <div class="media-note">[ framework comparison matrix goes here, once complete ]</div>
     </section>
 
     <!-- ==========================================================================
-         SECTION 5: THE MESSY MIDDLE (Pivots & Mistakes)
+         SECTION 5: THE TENSION ALREADY IN PLAY
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">03.</span> The Messy Middle <span class="sub-title-playful">// "When my first prototype failed"</span></h2>
-      
+      <h2 class="section-title"><span class="title-num">03.</span> The Tension Already in Play <span class="sub-title-playful">// "No pivot yet — but here's the real design bet"</span></h2>
+
       <p class="case-p">
-        My first low-fidelity wireframe tested amazingly—right up until I realized I had accidentally biased the test. I had shown it to internal team members who already understood our internal tax glossary!
+        Even at this early stage, there's a real design decision baked into the plan worth naming: I'm not allowed to just pick the AI features that sound most impressive.
       </p>
 
       <div class="callout-box warning-box">
         <span class="callout-icon">⚠️</span>
         <div>
-          <strong>The Pivot:</strong> When I tested the exact same wireframe with 4 brand-new external participants during Round 2, 3 of them got stuck on the term "Authorization Hold." They thought it was a hidden penalty fee. I had to scrap the entire modal and redesign the transparency hierarchy from scratch.
+          <strong>The Bet:</strong> Care managers are working in a clinical trust context — recommending the wrong feature, or one that feels like a black box, could actively hurt adoption. So all six candidate features (risk prediction, disengagement prediction, automated summarization, intervention recommendations, workload balancing, and integrated family tracking) get tested for trust and workflow fit before any of them earns a place in the wireframe. Feasibility isn't the bar — trust is. There's also a structural risk I'm designing around: only one formal wireframe feedback cycle is built into the timeline before the December deadline, so recruitment has to move fast enough to hit an August–October interview window.
         </div>
-      </div>
-
-      <!-- VIDEO / GIF DEMO PLACEHOLDER -->
-      <div class="media-container">
-        <div class="video-placeholder">
-          <div class="play-button">▶</div>
-          <p>[ Screen Recording GIF / Video: Failed Flow vs Pivoted Flow ]</p>
-        </div>
-        <span class="media-caption">Figure 3.1: Video walkthrough comparing the initial failed modal against the revised inline callout.</span>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECTION 6: THE FIX (Rationale & Solution)
+         SECTION 6: THE PLAN
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">04.</span> The Fix <span class="sub-title-playful">// "Designing with receipts"</span></h2>
-      
+      <h2 class="section-title"><span class="title-num">04.</span> The Plan <span class="sub-title-playful">// "Not a solution yet — this is what Phase 4 builds toward"</span></h2>
+
       <p class="case-p">
-        Every pixel in the final design tied directly back to a research finding from our synthesis phase.
+        The target deliverable is a single wireframe that does two things at once: meets the baseline CCM registry requirements defined by AIMS Center and AHRQ, and layers in 2–3 AI features that interview data shows care managers would actually trust and use.
       </p>
 
-      <!-- Solution Breakdown Grid -->
       <div class="solution-grid">
         <div class="solution-card">
-          <h4>Decision 01: Upfront Pricing Guarantee</h4>
-          <p><strong>Backed by finding:</strong> 7/8 users expressed anxiety about "hidden fees." We added an explicit price breakdown card <em>before</em> credit card entry.</p>
+          <h4>Leading Candidate: Disengagement Prediction</h4>
+          <p><strong>Pending validation.</strong> Flagging patients at risk of dropping out of collaborative care before it happens.</p>
         </div>
         <div class="solution-card">
-          <h4>Decision 02: Progressive Disclosure Tooltips</h4>
-          <p><strong>Backed by finding:</strong> Replacing jargon with micro-tooltips reduced support ticket inquiries related to billing terms down to zero during testing.</p>
+          <h4>Leading Candidate: Automated Caseload Summarization</h4>
+          <p><strong>Pending validation.</strong> Reducing the manual overhead of reviewing large caseloads.</p>
+        </div>
+        <div class="solution-card">
+          <h4>Leading Candidate: Risk-Based Prioritization</h4>
+          <p><strong>Pending validation.</strong> Helping care managers triage who needs attention first.</p>
         </div>
       </div>
 
-      <!-- BEFORE & AFTER COMPARISON MEDIA -->
-      <div class="before-after-wrapper">
-        <div class="media-container">
-          <img src="https://placehold.co/550x350/ffe6e6/333?text=BEFORE:+Confusing+Step+3" alt="Old Interface" class="responsive-media">
-          <span class="media-caption">BEFORE: Cluttered layout with hidden fee language.</span>
-        </div>
-        <div class="media-container">
-          <img src="https://placehold.co/550x350/e6f2ff/333?text=AFTER:+Transparent+Flow" alt="New Interface" class="responsive-media">
-          <span class="media-caption">AFTER: Clean hierarchy with upfront authorization breakdown.</span>
-        </div>
-      </div>
+      <p class="case-p">
+        These three are likely candidates, not decided ones — final selection depends on interview results from Phase 2 and 3. The design principle underneath all of it: AI features earn their place in the dashboard the same way any core registry function would — by being grounded in what the standards require and validated by the people who'll actually rely on it every day.
+      </p>
     </section>
 
     <!-- ==========================================================================
-         SECTION 7: DID IT WORK? (Impact & Outcomes)
+         SECTION 7: WHERE THINGS STAND
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">05.</span> Did It Work? <span class="sub-title-playful">// "The scoreboard"</span></h2>
+      <h2 class="section-title"><span class="title-num">05.</span> Where Things Stand <span class="sub-title-playful">// "An honest status check, not a scoreboard"</span></h2>
 
       <div class="impact-metrics-bar">
         <div class="metric-card">
-          <span class="metric-number">1/8</span>
-          <span class="metric-label">Task confusion in validation testing (down from 6/8)</span>
+          <span class="metric-number">1 / 5</span>
+          <span class="metric-label">Current phase — Foundation &amp; Framework Analysis</span>
         </div>
         <div class="metric-card">
-          <span class="metric-number">+28%</span>
-          <span class="metric-label">Checkout completion rate post-launch</span>
+          <span class="metric-number">6</span>
+          <span class="metric-label">Candidate AI features under evaluation</span>
         </div>
         <div class="metric-card">
-          <span class="metric-number">-45%</span>
-          <span class="metric-label">Reduction in billing-related support tickets</span>
+          <span class="metric-number">Dec '26</span>
+          <span class="metric-label">Wireframe deadline — the non-negotiable milestone</span>
         </div>
       </div>
 
       <p class="case-p">
-        Beyond the quantitative metrics, the qualitative victory was clear: during final validation tests, participants stopped pausing at step 3 altogether. They sailed right through to payment confirmation without asking a single clarification question.
+        This is deliberately not a results section, because there aren't results yet — and I'd rather say that plainly than dress up a work-in-progress as a finding. As of now, the literature review and framework analysis are underway, and the interview protocol is being developed. Care manager recruitment starts next. Usability validation and manuscript writing are intentionally scheduled after the December wireframe deadline, so they can't compete with it for time.
       </p>
     </section>
 
     <!-- ==========================================================================
-         SECTION 8: BEHIND THE SCENES (Reflection & Retrospective)
+         SECTION 8: BEHIND THE SCENES
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">06.</span> Behind the Scenes <span class="sub-title-playful">// "Director's Commentary"</span></h2>
-      
+      <h2 class="section-title"><span class="title-num">06.</span> Behind the Scenes <span class="sub-title-playful">// "Director's Commentary (so far)"</span></h2>
+
       <div class="commentary-box">
         <p>
-          If I were doing this project again today, I would involve the engineering team in the second round of user interviews. We lost 3 days debating whether progressive disclosure was technically feasible when a simple CSS accordion could have solved it immediately. I learned that showing devs a 30-second clip of a user struggling is 10x more effective than writing a 10-page spec document.
+          Structuring five months of research to protect one hard deadline is its own design problem — the plan explicitly pushes validation and writing to after December so they can't quietly eat into design time. Building AI-feature reactions into the interview protocol from day one, rather than testing a finished AI concept later, was a deliberate choice — it means trust and desirability get to shape which features get designed, not just how they look once decided. Something I'm watching for as this continues: whether the "one feedback cycle" constraint ends up being enough, or whether the plan needs to flex there once real wireframes are in front of care managers.
         </p>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECTION 9: SOUVENIRS (Artifacts & External Links)
+         SECTION 9: SOUVENIRS
          ========================================================================== -->
     <section class="case-section">
-      <h2 class="section-title"><span class="title-num">07.</span> Souvenirs <span class="sub-title-playful">// "Take one home with you"</span></h2>
-      
-      <p class="case-p">Want to inspect the raw materials? Feel free to dive into the actual project deliverables below:</p>
+      <h2 class="section-title"><span class="title-num">07.</span> Souvenirs <span class="sub-title-playful">// "Coming as each phase wraps"</span></h2>
+
+      <p class="case-p">This case study will grow with the project. Artifacts will be linked here as they're delivered:</p>
 
       <div class="souvenirs-grid">
-        <a href="https://drive.google.com/file/d/1b0p_dgz1aRIr2gUyFwhJnT4V1Vozf5mp/view?usp=drive_link" target="_blank" class="souvenir-card">
-          <span class="souvenir-icon">🎨</span>
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">📊</span>
           <div>
-            <strong>Design Prototype Walkthrough</strong>
-            <p>Click through the full validated flow.</p>
+            <strong>Framework Analysis / Comparison Matrix</strong>
+            <p>Available Aug 2026</p>
           </div>
           <span class="arrow">↗</span>
         </a>
 
-        <a href="#" target="_blank" class="souvenir-card">
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">🗂️</span>
+          <div>
+            <strong>Interview Findings Report</strong>
+            <p>Available Nov 2026</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">🖼️</span>
+          <div>
+            <strong>AI-Integrated Dashboard Wireframe</strong>
+            <p>Available Dec 2026</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a href="#" class="souvenir-card pending">
           <span class="souvenir-icon">📄</span>
           <div>
-            <strong>Research Report Deck (PDF)</strong>
-            <p>12-slide executive summary shared with leadership.</p>
-          </div>
-          <span class="arrow">↗</span>
-        </a>
-
-        <a href="#" target="_blank" class="souvenir-card">
-          <span class="souvenir-icon">💻</span>
-          <div>
-            <strong>GitHub Repository</strong>
-            <p>View the front-end code for the design system components.</p>
+            <strong>Manuscript / Publication Draft</strong>
+            <p>Available Apr 2027</p>
           </div>
           <span class="arrow">↗</span>
         </a>
       </div>
     </section>
 
-    <!-- BOTTOM NEXT/PREV NAVIGATION -->
     <div class="case-bottom-nav">
       <a href="projects.html" class="btn-primary">← Back to All Projects</a>
-      <a href="#" class="btn-primary" style="background-color: var(--soft-blue);">Next Project: AI Prompt Audit ➔</a>
+      <a href="case-study-cbit.html" class="btn-primary" style="background-color: var(--color-blue); color: var(--color-ink);">Previous Project: CBIT Study Buddy ➔</a>
     </div>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>Case File Completed. Designed &amp; Coded with ☕.</p>
+    <p>Case File Open — Updating Through April 2027. Designed &amp; coded with ☕.</p>
   </footer>
 
 </body>
