@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Issho | shrina.ux</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Outfit:wght@300;400;500;600&family=Syne:wght@700;800&family=VT323&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="grain-overlay"></div>
+
+  <header class="site-header">
+        <a href="index.html" class="logo-link">
+            <div class="logo-text">research<span class="dot">.</span>log</div>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="projects.html" class="nav-item active">Work</a>
+            <a href="index.html#about" class="nav-item">About</a>
+            <a href="coffee-table.html" class="nav-item badge-nav">Coffee Table ☕</a>
+            <a href="contact.html" class="nav-item btn-nav">Contact</a>
+        </nav>
+    </header>
+
+  <!-- ==========================================================================
+       SECTION 1: THE COVER
+       ========================================================================== -->
+  <section class="case-cover">
+    <div class="case-cover-container">
+
+      <div class="category-badges">
+        <span class="badge-pixel">★ CASE FILE #02 ★</span>
+        <span class="tag-pill tag-interaction">Interaction Design</span>
+        <span class="tag-pill tag-ai">AI Dev</span>
+      </div>
+
+      <h1 class="case-title">A shared apartment for people who love each other from far away.</h1>
+      <p class="case-one-liner">Issho gives long-distance couples, best friends, spouses, and siblings a private virtual apartment they build and maintain together — turning "miss you" texts into a recurring, low-effort ritual that doesn't need a synced schedule.</p>
+
+      <div class="meta-dossier-grid">
+        <div class="meta-item">
+          <span class="meta-label">MY ROLE</span>
+          <span class="meta-value">Product Designer &amp; Developer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TIMELINE</span>
+          <span class="meta-value">[Add project timeline]</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TEAM SIZE</span>
+          <span class="meta-value">Me, myself and I</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">TOOLKIT / METHODS</span>
+          <span class="meta-value">PRD Authorship, System Design, Figma Make, Content Pipeline Design</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hero media intentionally omitted — to be added later -->
+
+  <main class="case-body">
+
+    <!-- ==========================================================================
+         SECTION 2: THE TL;DR
+         ========================================================================== -->
+    <div class="tldr-box">
+      <div class="tldr-header">
+        <span class="tldr-badge">⚡ THE QUICK RECEIPTS (TL;DR)</span>
+      </div>
+      <p class="tldr-text">
+        <strong>The Problem:</strong> Long-distance relationships — romantic, platonic, or family — lose their shared rituals to time zones and the slow fade of novelty, and existing tools don't fit: video calls need scheduling, social media is public, couple apps are either purely romantic or purely functional.<br>
+        <strong>What I Did:</strong> Designed a persistent shared space (an apartment) with async-first interactive activities, mapped a full decoration-to-activity system, and worked it through to a functioning prototype.<br>
+        <strong>Headline Outcome:</strong> A working prototype demonstrating the full core loop — decorate, activate, maintain, remember — validated as a system before any content or engineering scale-up.
+      </p>
+    </div>
+
+    <!-- ==========================================================================
+         SECTION 3: THE SCENE
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">01.</span> The Scene <span class="sub-title-playful">// "The chat thread that goes quiet"</span></h2>
+
+      <p class="case-p">
+        Every long-distance relationship — not just romantic ones — hits the same wall eventually. Time zones make real-time connection genuinely hard to schedule. The novelty of texting and calling fades over months or years apart. And the small rituals that used to hold a relationship together — cooking dinner together, watching a movie, just existing in the same space — quietly disappear without deliberate, effortful planning to replace them.
+      </p>
+
+      <p class="case-p">
+        The tools that exist don't actually fill that gap. Video calls demand full attention and a synced schedule. Social media is public and passive, not private and participatory. Couple apps tend to force a choice: either purely romantic (which excludes best friends, siblings, and spouses going through the exact same distance problem) or purely functional — a shared calendar with no joy in it.
+      </p>
+
+      <blockquote class="handwritten-quote">
+        "Issho" — 一緒 — means "together." That's the whole bet: a place, not a thread.
+      </blockquote>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: WHAT I ACTUALLY DID
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">02.</span> What I Actually Did <span class="sub-title-playful">// "Building the system, not just the screens"</span></h2>
+
+      <p class="case-p">
+        Before any screen got designed, this needed a system — one flexible enough to hold romantic partners, best friends, married couples, and siblings without feeling generic to any of them.
+      </p>
+
+      <ul class="rigor-list">
+        <li><strong>Problem framing:</strong> defined the four core failure modes of long-distance connection (time zones, fading novelty, disappearing rituals, ill-fitting tools) as the design brief, rather than starting from "what features should this app have."</li>
+        <li><strong>Explicit non-goals:</strong> scoped out replacing video/voice calling, becoming a public social network, and supporting large group households for v1 — narrowing the system early instead of letting it sprawl.</li>
+        <li><strong>Core system design:</strong> apartment → rooms → decorations → activities, where every new decoration is just a new (activity type + content pack) pair — designed so the system scales without needing new mechanics for every addition.</li>
+        <li><strong>Relationship-aware content architecture:</strong> the same mechanic (e.g., the projector triggers a movie-night pick) produces different content depending on relationship type — a rom-com for a couple, a trending show for friends, a nostalgic rewatch for siblings — same system, different content pack.</li>
+        <li><strong>Prototype:</strong> built out the core flows — onboarding and pairing, daily use, decoration interaction, task completion, and decorating — as a working prototype to pressure-test the system end to end.</li>
+      </ul>
+
+      <div class="media-note">[ decoration → activity matrix diagram goes here ]</div>
+      <div class="media-note">[ prototype screens / flow walkthrough go here ]</div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: THE MESSY MIDDLE
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">03.</span> The Messy Middle <span class="sub-title-playful">// "The async promise almost broke itself"</span></h2>
+
+      <p class="case-p">
+        The entire pitch of Issho is async-first — you shouldn't need to be online at the same time as the other person. But some of the best activity ideas (movie night, a Pictionary-style drawing game) are only really good <em>live</em>. That's a direct contradiction sitting in the middle of the concept, and it surfaced early.
+      </p>
+
+      <div class="callout-box warning-box">
+        <span class="callout-icon">⚠️</span>
+        <div>
+          <strong>The Resolution:</strong> Rather than building in-app video/voice calling to solve it — which would have meant Issho competing with FaceTime and Zoom instead of complementing them — the app stays the <em>content and coordination layer</em>. For activities that genuinely want a live moment, Issho suggests a specific real-time hangout (an 80s thriller on Teleparty, a drawing game on a Zoom whiteboard) and supplies the content — the movie pick, the drawing prompts, the discussion cards — while the actual call happens in whatever tool the pair already uses. The async fallback (leave your part, get notified) stays available for everything that doesn't need a live moment. Issho never has to build or maintain calling infrastructure.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: THE FIX
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">04.</span> The Fix <span class="sub-title-playful">// "The system that holds four relationship types at once"</span></h2>
+
+      <p class="case-p">
+        Every core decision traces back to keeping the system flexible without making it feel generic to any one relationship type.
+      </p>
+
+      <div class="solution-grid">
+        <div class="solution-card">
+          <h4>Shared Apartment &amp; Rooms</h4>
+          <p><strong>Backed by:</strong> the need for a persistent "place" instead of a disappearing chat thread. Rooms expand as the relationship "levels up" through use — giving a long-term reason to keep coming back that a chat thread can't offer.</p>
+        </div>
+        <div class="solution-card">
+          <h4>Interactive Decorations &amp; Activities</h4>
+          <p><strong>Backed by:</strong> the need to replace vanished rituals (cooking together, movie nights) without requiring deliberate, effortful planning every time. Each decoration is a standing invitation to a small shared moment.</p>
+        </div>
+        <div class="solution-card">
+          <h4>AI-Assisted Trending Content Pipeline</h4>
+          <p><strong>Backed by:</strong> the "novelty fades" failure mode — static content packs go stale. Designed a lightweight content-ops process (biweekly refresh cadence) that pulls a rotating set of prompts from what's currently trending, layered on top of an evergreen baseline library that always works — so the app doesn't rely on manually authoring every prompt indefinitely.</p>
+        </div>
+        <div class="solution-card">
+          <h4>Soft, Non-Punishing Neglect Mechanics</h4>
+          <p><strong>Backed by:</strong> the emotional stakes of long-distance relationships specifically. A drooping plant or a dusty room, never a lockout or guilt-driven mechanic — the app is meant to lighten the relationship, not add another thing to feel bad about.</p>
+        </div>
+      </div>
+
+      <div class="media-note">[ key screens: room editor, activity flow, photo wall go here ]</div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: DID IT WORK?
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">05.</span> Did It Work? <span class="sub-title-playful">// "The honest scoreboard"</span></h2>
+
+      <div class="impact-metrics-bar">
+        <div class="metric-card">
+          <span class="metric-number">9</span>
+          <span class="metric-label">Interactive decoration/activity pairs designed as one extensible system</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">4</span>
+          <span class="metric-label">Relationship types supported by the same core mechanics</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">5</span>
+          <span class="metric-label">Core user flows carried through to a working prototype</span>
+        </div>
+      </div>
+
+      <p class="case-p">
+        This is a personal concept project, not a shipped product — so I'm not going to dress up engagement metrics that don't exist. What I do have: a system that was deliberately scoped down to an MVP (3 rooms, 4–5 decorations, basic tasks) from a much larger vision, a resolved architectural contradiction (async-first vs. live-activity appeal) that could have quietly broken the whole premise if left unaddressed, and a working prototype that proves the core loop holds together end to end.
+      </p>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: BEHIND THE SCENES
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">06.</span> Behind the Scenes <span class="sub-title-playful">// "Director's Commentary"</span></h2>
+
+      <div class="commentary-box">
+        <p>
+          The hardest part of this project wasn't any single screen — it was writing down explicit non-goals early enough to matter. "The decoration/activity system can grow indefinitely" is listed as a real risk in my own planning notes, and it's true: it would have been easy to keep adding rooms and activities forever instead of shipping a coherent v1. Deciding not to build in-app calling was the single highest-leverage design decision in the whole project — it kept Issho focused on being a content and coordination layer instead of competing with tools that already do video well. If I extended this further, the next thing I'd actually test is the neglect-mechanic tone with real long-distance pairs — "encouraging, not guilt-inducing" is easy to state as a principle and much harder to verify without watching someone actually react to a drooping plant.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: SOUVENIRS
+         ========================================================================== -->
+    <section class="case-section">
+      <h2 class="section-title"><span class="title-num">07.</span> Souvenirs <span class="sub-title-playful">// "Take one home with you"</span></h2>
+
+      <p class="case-p">Want to inspect the raw materials? Links to be added:</p>
+
+      <div class="souvenirs-grid">
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">📱</span>
+          <div>
+            <strong>Working Prototype</strong>
+            <p>Link to be added</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">📋</span>
+          <div>
+            <strong>Full Product Requirements Document</strong>
+            <p>Link to be added</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a href="#" class="souvenir-card pending">
+          <span class="souvenir-icon">🎲</span>
+          <div>
+            <strong>Activity Library (companion doc)</strong>
+            <p>Link to be added</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="case-bottom-nav">
+      <a href="projects.html" class="btn-primary">← Back to All Projects</a>
+      <a href="peer-study-app.html" class="btn-primary" style="background-color: var(--color-blue); color: var(--color-ink);">Next Project: CBIT Study Buddy ➔</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Case File Closed. Designed &amp; coded with ☕.</p>
+  </footer>
+
+</body>
+</html>
