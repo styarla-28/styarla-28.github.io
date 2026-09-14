@@ -11,7 +11,7 @@
   --sage-green: #C1CDA5;
   --sunshine-yellow: #ffffdb;
   --muted-red: #BF4F51;
-  --grid-line: rgba(174, 205, 226, 0.35);
+  --grid-line: #aecde259;
 
   /* Typography */
   --font-body: 'Outfit', sans-serif;
@@ -1539,7 +1539,7 @@ body {
 /* Sidebar Contact Info */
 .contact-info-aside {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1.5rem;
 }
 
